@@ -15,8 +15,6 @@ public class EnemyPathing : MonoBehaviour {
 
         waypoints = waveConfig.GetWaypoints();
 
-        //Debug.Log(transform.position);
-        //Debug.Log(FindObjectOfType<EnemyPathing>().gameObject.GetComponent<EnemyPathing>().gameObject.transform.position);
 
         // This is how you populate the list programmatically 
         /*
