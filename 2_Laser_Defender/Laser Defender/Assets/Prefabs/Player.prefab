@@ -72,10 +72,15 @@ MonoBehaviour:
   moveSpeed: 10
   padding: 1
   health: 500
+  explosion: {fileID: 1909478712926994, guid: 76a952b667300df4e84af81e146259e1, type: 2}
   laserPrefab: {fileID: 1878902653553352, guid: 633126bbb4e64ca44a7103364b425029,
     type: 2}
   projectileSpeed: 20
-  projectileFiringPeriod: 0.1
+  projectileFiringPeriod: 0.15
+  deathSound: {fileID: 8300000, guid: 435d20a722d62604da26fb947680c115, type: 3}
+  soundLevel: 0.5
+  projectileSound: {fileID: 8300000, guid: 19a0417f39bc566478d554f845545928, type: 3}
+  projectileSoundLevel: 0.166
 --- !u!114 &114812322871049288
 MonoBehaviour:
   m_ObjectHideFlags: 1

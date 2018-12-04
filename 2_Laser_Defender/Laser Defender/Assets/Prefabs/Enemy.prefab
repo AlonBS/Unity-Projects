@@ -113,6 +113,11 @@ MonoBehaviour:
   enemyLaserPrefab: {fileID: 1878902653553352, guid: 3734f6755d5596244bd7404e06807ebb,
     type: 2}
   projectileSpeed: 10
+  explosion: {fileID: 1909478712926994, guid: 76a952b667300df4e84af81e146259e1, type: 2}
+  deathSound: {fileID: 8300000, guid: d4623fb170825da46851e87884d3e69b, type: 3}
+  soundLevel: 0.465
+  projectileSound: {fileID: 8300000, guid: 1171fcdd3063314438229f60168ac4b3, type: 3}
+  projectileSoundLevel: 0.15
 --- !u!114 &114841552173949364
 MonoBehaviour:
   m_ObjectHideFlags: 1
