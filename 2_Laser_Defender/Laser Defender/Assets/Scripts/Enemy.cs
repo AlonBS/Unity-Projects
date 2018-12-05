@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour {
     [SerializeField] float shotCounter = 1f;
     [SerializeField] float minTimeBetweenShots = .2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
+    [SerializeField] int pointsWhenKilled = 100;
 
     [SerializeField] GameObject enemyLaserPrefab;
     [SerializeField] float projectileSpeed = 10f;
@@ -69,13 +70,29 @@ public class Enemy : MonoBehaviour {
         health -= damageDealer.Damage;
         if (health <= 0f)
         {
+            HandleDeath();
+            
+
+        }
+        damageDealer.Hit();
+    }
+
+
+    private void HandleDeath()
+    {
+        // Effects
+        {
             AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, soundLevel);
 
             var explosionObj = Instantiate(explosion.gameObject, transform.position, Quaternion.identity);
             Destroy(explosionObj, 1f);
             Destroy(gameObject);
-
         }
-        damageDealer.Hit();
+
+        // UI (Score)
+        {
+            Debug.Log("HERE");
+            FindObjectOfType<GameScore>().AddToScore(pointsWhenKilled);
+        }
     }
 }

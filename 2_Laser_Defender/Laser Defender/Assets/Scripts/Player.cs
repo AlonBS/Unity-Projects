@@ -7,7 +7,7 @@ public class Player : MonoBehaviour {
     [Header("Player")]
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
-    [SerializeField] float health = 500f;
+    [SerializeField] int health = 500;
     [SerializeField] GameObject explosion;
 
     [Header("Projectile")]
@@ -95,14 +95,23 @@ public class Player : MonoBehaviour {
     private void ProcessHit(DamageDealer damageDealer)
     {
         health -= damageDealer.Damage;
-        if (health <= 0f)
+        if (health <= 0)
         {
             AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, soundLevel);
             var explosionObj = Instantiate(explosion.gameObject, transform.position, Quaternion.identity);
             Destroy(explosionObj, 1f);
             Destroy(gameObject);
+
+            FindObjectOfType<SceneLoader>().LoadGameOver();
         }
         damageDealer.Hit();
+    }
+
+
+
+    public int GetHealth()
+    {
+        return health;
     }
 
 
