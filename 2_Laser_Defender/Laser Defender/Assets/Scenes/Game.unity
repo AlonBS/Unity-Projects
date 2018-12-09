@@ -634,6 +634,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224149288987680372, guid: a2b392070d661c7448b4408cdede85fb,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -399
+      objectReference: {fileID: 0}
+    - target: {fileID: 224149288987680372, guid: a2b392070d661c7448b4408cdede85fb,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -72
+      objectReference: {fileID: 0}
+    - target: {fileID: 114444052089314936, guid: a2b392070d661c7448b4408cdede85fb,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2b392070d661c7448b4408cdede85fb, type: 2}
   m_IsPrefabAsset: 0
@@ -921,7 +936,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 187, y: -92}
+  m_AnchoredPosition: {x: 383, y: -74}
   m_SizeDelta: {x: 276.90002, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974265060
@@ -957,7 +972,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 10e3abff9f3e15444851e21068759eff, type: 3}
-    m_FontSize: 80
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
