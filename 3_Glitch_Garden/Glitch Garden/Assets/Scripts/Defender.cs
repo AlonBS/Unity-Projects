@@ -4,30 +4,8 @@ using UnityEngine;
 
 public class Defender : MonoBehaviour {
 
-
-    [SerializeField] GameObject projectile;
-    [SerializeField] GameObject gun;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    [SerializeField] int starCost = 100;
 
 
-    public void Fire()
-    {
-        Instantiate(projectile, gun.transform.position, gun.transform.rotation);
-        Debug.Log("FIRE!");
-        return;
-
-        
-
-    }
-
-
+       
 }

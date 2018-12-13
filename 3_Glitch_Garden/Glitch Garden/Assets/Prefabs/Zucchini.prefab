@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212006077802013970}
   - component: {fileID: 114754710346751934}
   - component: {fileID: 60654762281507798}
-  - component: {fileID: 114801519257111998}
   - component: {fileID: 50762238348993256}
   m_Layer: 0
   m_Name: Zucchini
@@ -113,18 +112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translationSpeed: 5
   rotationAngle: 240
---- !u!114 &114801519257111998
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1730045554958694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5e7f2d2f27e5d24bb1b5c79a31e7cf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   damage: 50
+  hitSound: {fileID: 8300000, guid: c7626c9ffe415754cbd57f761d800baf, type: 3}
+  volume: 0.34
 --- !u!212 &212006077802013970
 SpriteRenderer:
   m_ObjectHideFlags: 1

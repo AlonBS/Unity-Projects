@@ -10,6 +10,9 @@ public class DefenderProjectile : MonoBehaviour {
 
     [SerializeField] int damage = 50;
 
+    [SerializeField] AudioClip hitSound;
+    [SerializeField] float volume = 1f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -36,6 +39,12 @@ public class DefenderProjectile : MonoBehaviour {
 
         if (health && attacker)
         {
+            if (hitSound)
+            {
+                AudioSource.PlayClipAtPoint(hitSound, Camera.main.transform.position, volume);
+                
+            }
+
             health.DealDamage(damage);
             Destroy(gameObject);
 

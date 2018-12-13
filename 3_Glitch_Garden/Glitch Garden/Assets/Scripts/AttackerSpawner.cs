@@ -30,8 +30,6 @@ public class AttackerSpawner : MonoBehaviour {
         newPos.y -= Random.Range(0, 4);
         Instantiate(attackerPrefab, newPos, Quaternion.identity);
 
-
-
     }
 	
 	// Update is called once per frame

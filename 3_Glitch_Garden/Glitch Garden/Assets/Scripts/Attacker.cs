@@ -7,9 +7,9 @@ public class Attacker : MonoBehaviour {
     [SerializeField] int health = 100;
 
     [Header("Effects")]
-    [SerializeField] AudioClip deathSound;
+    //[SerializeField] AudioClip deathSound;
     [SerializeField] float soundVolume = 1f;
-    [SerializeField] GameObject deathExplosion;
+    //[SerializeField] GameObject deathExplosion;
     
 
     private float currentSpeed = 1f;
