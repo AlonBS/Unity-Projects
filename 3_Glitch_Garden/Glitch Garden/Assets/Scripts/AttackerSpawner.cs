@@ -28,8 +28,9 @@ public class AttackerSpawner : MonoBehaviour {
     {
         Vector3 newPos = transform.position;
         newPos.y -= Random.Range(0, 4);
-        Instantiate(attackerPrefab, newPos, Quaternion.identity);
 
+        Attacker newAttacker = Instantiate(attackerPrefab, newPos, Quaternion.identity) as Attacker;
+        newAttacker.transform.parent = transform;
     }
 	
 	// Update is called once per frame

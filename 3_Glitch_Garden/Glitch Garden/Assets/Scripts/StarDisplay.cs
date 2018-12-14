@@ -23,17 +23,23 @@ public class StarDisplay : MonoBehaviour {
     }
 
 
-    public void AddStars(int ammount)
+    public bool HaveEnoughStars(int amount)
     {
-        currentNumOfStars += ammount;
+        return amount <= currentNumOfStars;
+    }
+
+
+    public void AddStars(int amount)
+    {
+        currentNumOfStars += amount;
         UpdateDisplay();
     }
 
-    public void SpendStars(int ammount)
+    public void SpendStars(int amount)
     {
-        if (ammount <= currentNumOfStars)
+        if (amount <= currentNumOfStars)
         {
-            currentNumOfStars -= ammount;
+            currentNumOfStars -= amount;
             UpdateDisplay();
         }
     }

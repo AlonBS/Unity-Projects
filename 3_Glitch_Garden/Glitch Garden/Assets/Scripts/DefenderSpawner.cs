@@ -22,12 +22,24 @@ public class DefenderSpawner : MonoBehaviour {
         if (!defender)
             return;
 
-        SpawnDefender(GetSquareClicked());
+        AttemptToPlaceAt(GetSquareClicked());
     }
 
     public void SetSelectedSpawnder(Defender defenderToSelect)
     {
         defender = defenderToSelect;
+    }
+
+    private void AttemptToPlaceAt(Vector2 gridPos)
+    {
+        var starDisplay = FindObjectOfType<StarDisplay>();
+        int defenderCost = defender.StarCost;
+
+        if (starDisplay.HaveEnoughStars(defenderCost)) {
+            SpawnDefender(gridPos);
+            starDisplay.SpendStars(defenderCost);
+        }
+
     }
 
     private Vector2 GetSquareClicked()
