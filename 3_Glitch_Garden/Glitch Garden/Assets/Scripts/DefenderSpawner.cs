@@ -8,8 +8,8 @@ public class DefenderSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -55,8 +55,6 @@ public class DefenderSpawner : MonoBehaviour {
 
     private void SpawnDefender(Vector2 worldPos)
     {
-        Debug.Log(worldPos);
         Defender newDefender = Instantiate(defender, worldPos, transform.rotation) as Defender;
-
     }
 }

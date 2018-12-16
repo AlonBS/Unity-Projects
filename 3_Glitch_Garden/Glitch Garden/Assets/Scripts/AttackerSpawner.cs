@@ -26,10 +26,10 @@ public class AttackerSpawner : MonoBehaviour {
 
     private void SpawnAttacker()
     {
-        Vector3 newPos = transform.position;
-        newPos.y -= Random.Range(0, 4);
+        //Vector3 newPos = transform.position;
+        //newPos.y -= Random.Range(0, 4);
 
-        Attacker newAttacker = Instantiate(attackerPrefab, newPos, Quaternion.identity) as Attacker;
+        Attacker newAttacker = Instantiate(attackerPrefab, transform.position, Quaternion.identity) as Attacker;
         newAttacker.transform.parent = transform;
     }
 	
