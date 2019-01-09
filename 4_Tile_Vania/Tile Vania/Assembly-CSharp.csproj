@@ -72,6 +72,7 @@
     <Compile Include="Assets\2d-extras-master\Assets\Tilemap\Tiles\Rule Tile\Scripts\RuleTile.cs" />
     <Compile Include="Assets\2d-extras-master\Assets\Tilemap\Tiles\Terrain Tile\Scripts\TerrainTile.cs" />
     <Compile Include="Assets\2d-extras-master\Assets\Tilemap\Tiles\Weighted Random Tile\WeightedRandomTile.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <None Include="Assets\platformer-pack-redux-360-assets\Spritesheets\spritesheet_hud.xml" />
     <None Include="Assets\platformer-pack-redux-360-assets\Spritesheets\spritesheet_ground.xml" />
@@ -83,6 +84,9 @@
     <None Include="Assets\platformer-pack-redux-360-assets\Spritesheets\spritesheet_complete.xml" />
     <None Include="Assets\platformer-pack-redux-360-assets\Spritesheets\spritesheet_players.xml" />
     <None Include="Assets\platformer-pack-redux-360-assets\License.txt" />
+    <Reference Include="Cinemachine">
+      <HintPath>D:/Programming/Repos/Unity/Unity-Projects-2D/4_Tile_Vania/Tile Vania/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Programming/Repos/Unity/Unity-Projects-2D/4_Tile_Vania/Tile Vania/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -91,6 +95,9 @@
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>D:/Programming/Repos/Unity/Unity-Projects-2D/4_Tile_Vania/Tile Vania/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>D:/Programming/Repos/Unity/Unity-Projects-2D/4_Tile_Vania/Tile Vania/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/Programming/Repos/Unity/Unity-Projects-2D/4_Tile_Vania/Tile Vania/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
