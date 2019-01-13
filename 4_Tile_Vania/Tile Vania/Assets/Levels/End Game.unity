@@ -792,6 +792,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114229745226397874, guid: eb867e4cb16fe2c44b4cfa560b43f085,
+        type: 2}
+      propertyPath: m_Text
+      value: Restart Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369443550460942, guid: eb867e4cb16fe2c44b4cfa560b43f085,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMainMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb867e4cb16fe2c44b4cfa560b43f085, type: 2}
   m_IsPrefabAsset: 0
