@@ -10,11 +10,11 @@ public class SceneLoader : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        Debug.Log(SceneManager.GetActiveScene().buildIndex);
-
-        StartCoroutine(LoadStartScene());
-
-		
+        
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            StartCoroutine(LoadStartScene());
+        }
 	}
 
 	// Update is called once per frame
@@ -34,5 +34,20 @@ public class SceneLoader : MonoBehaviour {
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-	
+
+    public void LoadEndScene()
+    {
+        SceneManager.LoadScene("Game Over");
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("Level 1");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
 }

@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 95181925960367330}
   - component: {fileID: 114956191937744190}
   - component: {fileID: 61784529661626658}
+  - component: {fileID: 114280681889778976}
   m_Layer: 0
   m_Name: Trophy
   m_TagString: Untagged
@@ -96,8 +97,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1738261971239164}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 1, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.0952125, y: -1.9234738, z: -0.13574219}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4917184453656910}
@@ -175,6 +176,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114280681889778976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1738261971239164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d863c7b6fadf9474aa8da153595b73f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
+  deathVFX: {fileID: 0}
 --- !u!114 &114956191937744190
 MonoBehaviour:
   m_ObjectHideFlags: 1

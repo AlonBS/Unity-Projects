@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114870786825256750}
   - component: {fileID: 95614348270563320}
   - component: {fileID: 61376806608308152}
+  - component: {fileID: 114734779270736682}
   m_Layer: 0
   m_Name: Cactus
   m_TagString: Untagged
@@ -81,8 +82,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1060782181887904}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.982, y: 3.014, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.7662258, y: 1.079751, z: -0.13574219}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 4347299147591274}
@@ -157,6 +158,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starCost: 100
+--- !u!114 &114734779270736682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060782181887904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d863c7b6fadf9474aa8da153595b73f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 75
+  deathVFX: {fileID: 0}
 --- !u!114 &114870786825256750
 MonoBehaviour:
   m_ObjectHideFlags: 1
