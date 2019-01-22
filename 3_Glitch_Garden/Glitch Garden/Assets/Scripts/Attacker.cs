@@ -16,8 +16,18 @@ public class Attacker : MonoBehaviour {
 
     private float currentSpeed = 1f;
 
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
+        FindObjectOfType<LevelController>().AttackerSpawned();
+    }
+
+    private void OnDestroy()
+    {
+        FindObjectOfType<LevelController>().AttackerKilled();
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -82,6 +92,8 @@ public class Attacker : MonoBehaviour {
             GetComponent<Animator>().SetBool("isAttacking", false);
         }
     }
+
+   
 
 
 

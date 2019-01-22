@@ -11,6 +11,9 @@ public class GameTimer : MonoBehaviour {
     private Slider slider;
 
 
+    private bool timeElapsed = false;
+        
+
     private void Start()
     {
         this.slider = GetComponent<Slider>();
@@ -20,12 +23,16 @@ public class GameTimer : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
+        if (timeElapsed)
+            return;
+
         slider.value = Time.timeSinceLevelLoad / levelTime;
 
         bool timerFinished = Time.timeSinceLevelLoad >= levelTime;
         if (timerFinished)
         {
-            Debug.Log("HEY MADA FACKA!");
+            FindObjectOfType<LevelController>().AlertTimerFinished();
+            timeElapsed = true;
         }
 
 

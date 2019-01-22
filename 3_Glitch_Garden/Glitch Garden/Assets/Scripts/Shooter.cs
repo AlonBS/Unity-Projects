@@ -55,7 +55,6 @@ public class Shooter : MonoBehaviour {
 
     public void Fire()
     {
-        Debug.Log("HERUEHRUIAEHR");
         Instantiate(projectile, gun.transform.position, gun.transform.rotation);
     }
 
