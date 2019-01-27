@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d863c7b6fadf9474aa8da153595b73f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 500
   deathVFX: {fileID: 0}
 --- !u!114 &114926111839675716
 MonoBehaviour:
@@ -196,8 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d40c74e0f607d42a03c3a027678012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  soundVolume: 1
 --- !u!212 &212719961765611948
 SpriteRenderer:
   m_ObjectHideFlags: 1

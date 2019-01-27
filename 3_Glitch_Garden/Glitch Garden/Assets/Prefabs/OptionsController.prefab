@@ -9,45 +9,49 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1359654972063118}
+  m_RootGameObject: {fileID: 1721940883620780}
   m_IsPrefabAsset: 1
---- !u!1 &1359654972063118
+--- !u!1 &1721940883620780
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4623217659680302}
-  - component: {fileID: 114047279122464650}
+  - component: {fileID: 4632834586468550}
+  - component: {fileID: 114430598979319912}
   m_Layer: 0
-  m_Name: LevelController
+  m_Name: OptionsController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4623217659680302
+--- !u!4 &4632834586468550
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1359654972063118}
+  m_GameObject: {fileID: 1721940883620780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.905021, y: 4.682047, z: 1.1817969}
+  m_LocalPosition: {x: 532.6333, y: 179.9506, z: -8.947214}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114047279122464650
+--- !u!114 &114430598979319912
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1359654972063118}
+  m_GameObject: {fileID: 1721940883620780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 960d4e314f749c74dad00a7fdd4aa7b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 94756266b072d2d44a506771a2de0d4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 0}
+  defaultVolume: 0.8
+  difficultySlider: {fileID: 0}
+  defaultDifficulty: 1

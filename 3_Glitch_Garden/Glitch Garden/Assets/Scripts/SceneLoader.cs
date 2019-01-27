@@ -32,6 +32,7 @@ public class SceneLoader : MonoBehaviour {
 
     public void LoadNextScene()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -42,7 +43,25 @@ public class SceneLoader : MonoBehaviour {
 
     public void RestartGame()
     {
-        SceneManager.LoadScene("Level 1");
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Start Screen");
+    }
+
+    public void LoadStartScreen()
+    {
+        RestartGame();
+        FindObjectOfType<OptionsController>().SaveSettings();
+    }
+
+    public void LoadOptions()
+    {
+        SceneManager.LoadScene("Options Screen");
+    }
+
+    public void RestartLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Quit()

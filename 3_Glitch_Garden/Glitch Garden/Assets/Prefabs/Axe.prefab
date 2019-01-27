@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translationSpeed: 1
   rotationAngle: 5
-  damage: 100
+  damage: 200
   hitSound: {fileID: 0}
   volume: 1
 --- !u!212 &212945212580220106

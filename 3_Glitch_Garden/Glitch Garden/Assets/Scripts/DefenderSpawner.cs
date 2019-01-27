@@ -5,10 +5,17 @@ using UnityEngine;
 public class DefenderSpawner : MonoBehaviour {
 
     Defender defender;
+    GameObject defenderParent;
+
+    private const string DEFENDER_PARENT_NAME = "Defenders";
 
 	// Use this for initialization
 	void Start () {
-
+        defenderParent = GameObject.Find(DEFENDER_PARENT_NAME);
+        if (!defenderParent)
+        {
+            defenderParent = new GameObject(DEFENDER_PARENT_NAME);
+        }
     }
 	
 	// Update is called once per frame
@@ -56,5 +63,6 @@ public class DefenderSpawner : MonoBehaviour {
     private void SpawnDefender(Vector2 worldPos)
     {
         Defender newDefender = Instantiate(defender, worldPos, transform.rotation) as Defender;
+        newDefender.transform.parent = defenderParent.transform;
     }
 }

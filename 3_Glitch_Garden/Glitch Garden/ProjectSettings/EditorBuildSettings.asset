@@ -9,12 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Splash Screen.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Start Scene.unity
+    path: Assets/Scenes/Start Screen.unity
     guid: 977cea712c6b7ba4e8d1fb4e4530d4b4
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: d93b32f2e411aa14c8acd9be6442035d
   - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 3dc658c88cc9ece4abb2ff2d147401b1
+  - enabled: 1
     path: Assets/Scenes/Game Over.unity
     guid: ef8a38bb8159b1b429efd886bcabde8b
+  - enabled: 1
+    path: Assets/Scenes/Options Screen.unity
+    guid: 7ee98642e4f0bec449ae93e19d481c47
   m_configObjects: {}

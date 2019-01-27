@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class Lives : MonoBehaviour {
 
 
-    [SerializeField] int numOfLives = 10;
+    [SerializeField] float baseLifes = 3;
+    float numOfLives;
 
     Text livesText;
 
@@ -16,6 +17,7 @@ public class Lives : MonoBehaviour {
     {
 
         livesText = GetComponent<Text>();
+        numOfLives = baseLifes - PlayerSettings.GetDifficulty();
         UpdateDisplay();
     }
 
@@ -30,9 +32,9 @@ public class Lives : MonoBehaviour {
     {
         numOfLives -= amount;
         UpdateDisplay();
-        if (numOfLives < 0)
+        if (numOfLives <= 0)
         {
-            FindObjectOfType<SceneLoader>().LoadEndScene();
+            FindObjectOfType<LevelController>().HandleLooseLevel();
         }
     }
 

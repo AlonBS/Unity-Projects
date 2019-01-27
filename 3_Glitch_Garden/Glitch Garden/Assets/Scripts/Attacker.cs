@@ -4,16 +4,7 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour {
 
-    [SerializeField] int health = 100;
-
-    [Header("Effects")]
-    //[SerializeField] AudioClip deathSound;
-    [SerializeField] float soundVolume = 1f;
-    //[SerializeField] GameObject deathExplosion;
-
     private GameObject currentTarget;
-    
-
     private float currentSpeed = 1f;
 
     private void Awake()
@@ -23,7 +14,11 @@ public class Attacker : MonoBehaviour {
 
     private void OnDestroy()
     {
-        FindObjectOfType<LevelController>().AttackerKilled();
+        LevelController lc = FindObjectOfType<LevelController>();
+        if (lc)
+        {
+            lc.AttackerKilled();
+        }
     }
 
     // Use this for initialization
@@ -42,27 +37,6 @@ public class Attacker : MonoBehaviour {
     {
         this.currentSpeed = speed;
     }
-
-
-
-    //private void HandleDeath()
-    //{
-    //    // Effects
-    //    {
-    //        AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, soundVolume);
-    //        //var explosionObj = Instantiate(explosion.gameObject, transform.position, Quaternion.identity);
-    //        //Destroy(explosionObj, 1f);
-    //        Destroy(gameObject);
-    //    }
-
-    //    // UI (Score)
-    //    {
-    //        //Debug.Log("HERE");
-    //        //FindObjectOfType<GameScore>().AddToScore(pointsWhenKilled);
-    //    }
-    //}
-
-
 
     public void Attack(GameObject target)
     {
@@ -92,9 +66,5 @@ public class Attacker : MonoBehaviour {
             GetComponent<Animator>().SetBool("isAttacking", false);
         }
     }
-
-   
-
-
 
 }
