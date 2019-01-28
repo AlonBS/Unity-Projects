@@ -51,7 +51,7 @@ public class LevelController : MonoBehaviour {
         GetComponent<AudioSource>().Play();
         Time.timeScale = 0;
 
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
 
         GetComponent<SceneLoader>().LoadNextScene();
     }
@@ -59,10 +59,6 @@ public class LevelController : MonoBehaviour {
     public void HandleLooseLevel()
     {
         looseLabel.SetActive(true);
-
         Time.timeScale = 0;
-        
-        //yield return new WaitForSeconds(3);
-
     }
 }

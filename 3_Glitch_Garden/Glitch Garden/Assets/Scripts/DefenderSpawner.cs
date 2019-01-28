@@ -6,9 +6,9 @@ public class DefenderSpawner : MonoBehaviour {
 
     Defender defender;
     GameObject defenderParent;
-
     private const string DEFENDER_PARENT_NAME = "Defenders";
 
+    private float difficulty;
 	// Use this for initialization
 	void Start () {
         defenderParent = GameObject.Find(DEFENDER_PARENT_NAME);
@@ -16,6 +16,8 @@ public class DefenderSpawner : MonoBehaviour {
         {
             defenderParent = new GameObject(DEFENDER_PARENT_NAME);
         }
+
+        difficulty = PlayerSettings.GetDifficulty();
     }
 	
 	// Update is called once per frame
@@ -26,9 +28,14 @@ public class DefenderSpawner : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        Debug.Log("HERE");
         if (!defender)
+        {
+            Debug.Log("HERE 2");
             return;
+        }
 
+        Debug.Log("HERE 3");
         AttemptToPlaceAt(GetSquareClicked());
     }
 
@@ -41,6 +48,14 @@ public class DefenderSpawner : MonoBehaviour {
     {
         var starDisplay = FindObjectOfType<StarDisplay>();
         int defenderCost = defender.StarCost;
+        if (difficulty == 0)
+        {
+            defenderCost /= 2;
+        }
+        else if (difficulty == 2)
+        {
+            defenderCost *= 2;
+        }
 
         if (starDisplay.HaveEnoughStars(defenderCost)) {
             SpawnDefender(gridPos);

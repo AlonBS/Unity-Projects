@@ -21,7 +21,18 @@ public class DefendersButtons : MonoBehaviour {
             return;
         }
 
-        costText.text = defenderPrefab.StarCost.ToString();
+        int cost = defenderPrefab.StarCost;
+        if (PlayerSettings.GetDifficulty() == 0)
+        {
+            cost /= 2;
+        }
+        else if (PlayerSettings.GetDifficulty() == 2)
+        {
+            cost *= 2;
+        }
+        
+
+        costText.text = cost.ToString();
 
     }
 

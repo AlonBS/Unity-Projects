@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translationSpeed: 5
   rotationAngle: 240
-  damage: 50
+  damage: 40
   hitSound: {fileID: 8300000, guid: c7626c9ffe415754cbd57f761d800baf, type: 3}
   volume: 0.34
 --- !u!212 &212006077802013970
